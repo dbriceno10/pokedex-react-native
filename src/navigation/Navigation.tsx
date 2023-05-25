@@ -13,7 +13,7 @@ export default function Navigation() {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Favorite"
+        name="FavoriteNavigator"
         component={FavoriteNavigation}
         options={{
           tabBarLabel: "Favoritos",
@@ -24,7 +24,7 @@ export default function Navigation() {
         }}
       />
       <Tab.Screen
-        name="Pokedex"
+        name="PokedexNavigator"
         component={PokedexNavigation}
         options={{
           tabBarLabel: "",
@@ -33,7 +33,7 @@ export default function Navigation() {
         }}
       />
       <Tab.Screen
-        name="Account"
+        name="AccountNavigator"
         component={AccountNavigation}
         options={{
           tabBarLabel: "Mi Cuenta",

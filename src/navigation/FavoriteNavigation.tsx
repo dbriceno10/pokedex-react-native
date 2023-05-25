@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 export default function FavoriteNavigation() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="FavoriteNavigator" component={FavoriteScreen} options={{title: "Favoritos"}} />
+      <Stack.Screen name="Favorite" component={FavoriteScreen} options={{title: "Favoritos"}} />
     </Stack.Navigator>
   );
 }
