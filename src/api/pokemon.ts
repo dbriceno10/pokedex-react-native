@@ -15,11 +15,8 @@ export const getPokemonsApi = async (
     const data: AxiosResponse<PokemonApi>[] = await Promise.all(
       response.data.results?.map((e) => axios.get(e.url))
     );
-    const pokemonsApi: PokemonApi[] = [];
-    data?.forEach((e) => pokemonsApi.push(e.data));
-
+    const pokemonsApi = data?.map((e) => e.data)
     const pokemons = pokemonsApi?.map((e) => getPokemonData(e));
-
     return pokemons;
   } catch (error) {
     throw error;
