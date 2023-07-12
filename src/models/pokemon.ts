@@ -1,11 +1,12 @@
-export interface PokemonResponse {
-  count: number;
-  next: string;
-  previous: string;
-  results: Result[];
-}
-
-export interface Result {
+export interface Pokemon {
+  id: number;
   name: string;
-  url: string;
+  hp: number;
+  strength: number;
+  defense: number;
+  speed: number;
+  height: number;
+  weight: number;
+  img: string;
+  types: string[];
 }
