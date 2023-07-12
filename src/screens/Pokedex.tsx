@@ -1,7 +1,7 @@
-import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useEffect, useState } from "react";
 
+import PokemonList from "../components/PokemonList";
 import { getPokemonsApi } from "../api/pokemon";
 import { Pokemon } from "../models/pokemon";
 
@@ -22,15 +22,7 @@ export default function Pokedex() {
   }, []);
   return (
     <SafeAreaView>
-      <Text>Pokedex</Text>
-      {pokemons?.map((e) => {
-        return (
-          <View key={e.id}>
-            <Text>{e.name}</Text>
-            <Text>{e.types?.join(", ")}</Text>
-          </View>
-        );
-      })}
+      <PokemonList pokemons={pokemons}/>
     </SafeAreaView>
   );
 }
